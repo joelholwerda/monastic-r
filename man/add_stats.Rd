@@ -24,11 +24,12 @@ add_stats(
 \item{fn}{An optional function used to format the statistical output.}
 
 \item{labels}{The column used to label data frame rows (or a character vector
-).}
+with length equal to the number of rows).}
 
 \item{notes}{A string containing additional information.}
 
-\item{...}{Additional arguments passed on to \code{fn()}.}
+\item{...}{Additional arguments passed on to \code{fn()} (if specified) or
+\code{tidy()} and \code{glance()} from the \code{broom} package.}
 }
 \value{
 A list containing the statistical output appended to the existing object.
