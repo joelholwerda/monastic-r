@@ -5,9 +5,10 @@
 #' @param title A short string describing the statistical output.
 #' @param fn An optional function used to format the statistical output.
 #' @param labels The column used to label data frame rows (or a character vector
-#' ).
+#' with length equal to the number of rows).
 #' @param notes A string containing additional information.
-#' @param ... Additional arguments passed on to `fn()`.
+#' @param ... Additional arguments passed on to `fn()` (if specified) or
+#' `tidy()` and `glance()` from the `broom` package.
 #'
 #' @return A list containing the statistical output appended to the existing object.
 #' @export
@@ -27,7 +28,7 @@ add_stats <- function(list, stats, title = NULL, fn = NULL, labels = NULL, notes
     if (!is.null(fn)) {
         formatted_stats <- fn(stats, ...)
     } else {
-        formatted_stats <- format_stats(stats, labels = labels)
+        formatted_stats <- format_stats(stats, labels = labels, ...)
     }
 
     if (!is.list(formatted_stats)) {
