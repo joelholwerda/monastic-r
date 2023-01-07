@@ -1,12 +1,18 @@
 Package: R2Word
-Title: What the Package Does (One Line, Title Case)
+Title: Export Statistical Output to be Used in Microsoft Word
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Joel", "Holwerda", , "joeldavidholwerda@gmail.com", role = c("aut", "cre"))
+Description: Under development. 
+    This project will eventually involve two components: 
+    1) An R package that exports statistical output to a formatted JSON file and 
+    2) A Word add-in that imports the statistical output from this JSON file. 
+    A graphical interface will allow the user to insert statistics into their 
+    document and automatically update them when a new JSON file is imported.
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
